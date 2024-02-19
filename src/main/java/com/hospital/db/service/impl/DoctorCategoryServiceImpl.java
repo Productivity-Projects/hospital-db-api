@@ -24,7 +24,7 @@ public class DoctorCategoryServiceImpl implements DoctorCategoryService{
 	}
 
 	@Override
-	public Response update(DoctorCategory doctorCategory) {
+	public Response update(DoctorCategory doctorCategory){
 		Response response = new Response();
 
 		DoctorCategory addCategory = categoryRepository.save(doctorCategory);

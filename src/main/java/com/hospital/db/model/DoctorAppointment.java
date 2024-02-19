@@ -1,7 +1,8 @@
 package com.hospital.db.model;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import jakarta.persistence.Entity;
@@ -11,26 +12,24 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+
 @Entity
 @Data
-@Table(name ="doctorRegistration")
-public class DoctorRegistration {
+@Table(name="DoctorAppointment")
+public class DoctorAppointment {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	Integer apointmentId;
+	Integer patientId;
+	Integer doctorCategoryId;
 	Integer doctorId;
-	String name;
-	Integer doctorCategory;
-	String phoneNo;
-	String gender;
-	String address;
-	Integer salary;
-	Integer experience;
-	Boolean dayAvailableStatus;
-	Boolean availability;
-	
+
+	@CreationTimestamp
+	Date scheduledTimeFrom;
+	@CreationTimestamp
+	Date scheduledTimeTo;
 	@UpdateTimestamp
-	LocalDateTime dateUpdateed;
-	
+	Date UpdatedTime;
 	
 }
