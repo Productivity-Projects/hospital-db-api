@@ -11,7 +11,7 @@ public interface DoctorAppointmentService {
 
 
 
-	Response bookDoctorAppointment(DoctorAppointment doctorAppointment, Date scheduledTimeFrom,
-			Date scheduledTimeTo, Integer patientId, Integer doctorId, Integer doctorCategoryId);
+	Response bookDoctorAppointment(DoctorAppointment doctorAppointment, String scheduledTimeFrom,
+			String scheduledTimeTo, Integer patientId, Integer doctorId, Integer doctorCategoryId);
 
 }

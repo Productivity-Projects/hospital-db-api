@@ -24,7 +24,7 @@ public class DoctorAppointmentController {
 	DoctorAppointmentService doctorAppointmentService;
 	
 	@PostMapping("booking")
-	public Response bookDoctorAppointment(@RequestBody DoctorAppointment doctorAppointment, @RequestParam Date scheduledTimeFrom, Date scheduledTimeTo,Integer patientId,Integer doctorId,Integer doctorCategoryId) {
+	public Response bookDoctorAppointment(@RequestBody DoctorAppointment doctorAppointment, @RequestParam String scheduledTimeFrom, String scheduledTimeTo,Integer patientId,Integer doctorId,Integer doctorCategoryId) {
 		return doctorAppointmentService.bookDoctorAppointment(doctorAppointment,scheduledTimeFrom,scheduledTimeTo,patientId,doctorId,doctorCategoryId);
 	}
 	
