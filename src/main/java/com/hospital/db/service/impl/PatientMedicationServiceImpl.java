@@ -13,7 +13,6 @@ public abstract class PatientMedicationServiceImpl implements PatientMedicationS
 	@Override
 	public PatientMedication savePatientMedication(PatientMedication patientMedication) {
 		
-
 		return null;
 	}
 

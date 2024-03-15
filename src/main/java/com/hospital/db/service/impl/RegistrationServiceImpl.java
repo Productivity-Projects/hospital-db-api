@@ -16,7 +16,6 @@ public class RegistrationServiceImpl implements RegistrationService {
 	@Override
 	public PatientRegistration SavePatient(PatientRegistration patientDetials) {
 		PatientRegistration savedPatient = regRepo.save(patientDetials);
-		
 		return savedPatient;
 	}
 

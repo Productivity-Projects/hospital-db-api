@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 import com.hospital.db.model.DoctorAppointment;
 import com.hospital.db.reposoitory.DoctorAppointmentRepository;
 import com.hospital.db.service.DoctorAppointmentService;
-import com.springbootcommonlib.mail.MailServiceImpl;
 import com.springbootcommonlib.response.Response;
+import com.springbootcommonlib.service.impl.MailServiceImpl;
 
 @Service
 public class DoctorAppointmentServiceImpl implements DoctorAppointmentService {

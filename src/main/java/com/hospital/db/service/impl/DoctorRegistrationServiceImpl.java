@@ -3,6 +3,7 @@ package com.hospital.db.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -36,10 +37,10 @@ public class DoctorRegistrationServiceImpl implements DoctorRegistrationService 
 		return response;
 	}
 
-
 	@Override
 	public Response findByCategory(Integer doctorCategory) {
 		 Response response = new Response();
+		
 		 List<DoctorRegistration> doctorCategoryList =  doctorRegistrationRepository.findByDoctorCategory(doctorCategory);
 		 response.setData(doctorCategoryList);
 		return response;
